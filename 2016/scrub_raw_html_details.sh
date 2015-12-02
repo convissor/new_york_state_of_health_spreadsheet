@@ -3,8 +3,8 @@
 if [[ $1 == "-h" || $1 == "--help" || $1 == "help" ]] ; then
 	echo "Usage: scrub_raw_html_details.sh"
 	echo ""
-	echo "Sanitizes and formats insurance plan detail files downloaded from"
-	echo "the New York State of Health website."
+	echo "Sanitizes and formats insurance plan detail web pages downloaded"
+	echo "from the New York State of Health website."
 	echo ""
 	echo "This script grabs all .html files in the raw_html_details directory,"
 	echo "processes them and deposits them in clean_html_details directory."
