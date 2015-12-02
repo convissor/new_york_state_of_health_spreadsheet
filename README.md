@@ -10,8 +10,16 @@ the shortcomings.
 * Starts: November 1
 * Deadline for Coverage Starting January 1: December 15
 * Ends: January 31
+* Medicaid and Child Health Plus: available all year long
 
 ## Spreadsheet
+
+The exchange has 88 health insurance plans for me to choose from.
+That's a _lot_ of stuff to think about.  But the site only allows
+comparing three plans at a time, and it only compares a few datapoints.
+I quickly came to the conclusion "For heaven's sake, give me a spreadsheet!"
+
+
 
 ## Tools for Extracting the Data
 
@@ -19,6 +27,19 @@ the shortcomings.
 
 This is an independent project.  The State of New York and the various
 insurance companies have nothing to do with it.
+
+## Questions?
+
+All questions should be addressed to the health insurance exchange:
+
+* Phone: 855-355-5777
+* TTY: 800-662-1220
+* https://nystateofhealth.ny.gov/individual
+
+Of course, if you're a computer programmer looking to help with this
+project or you have a job offer, that's another story! :)  To help out,
+fork the project and send in pull requests.  If you need a solid, senior
+developer, see my website: http://www.analysisandsolutions.com/
 
 ## Use at Your Own Risk
 
