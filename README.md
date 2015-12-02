@@ -1,10 +1,10 @@
-# New York State of Health... HEEEEELP!
+# New York State of Health Spreadsheet and Help
 
 New York's "Obamacare"
 [health insurance exchange website](https://nystateofhealth.ny.gov/individual)
 _really_ sucks.  Basic information is missing or hard to find.
 This repository is an independent attempt to work around some of
-those shortcomings.
+the shortcomings.
 
 ## 2016 Open Enrollment Dates
 * Starts: November 1
