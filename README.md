@@ -8,7 +8,7 @@ the shortcomings.
 
 # The Horror.  The Inspiration.
 
-Feel free to skip this section and go right to data, below.
+Feel free to skip this section and go right to data sections that follow.
 
 But if you're into schadenfreude and/or learning from others' mistakes,
 read on...
@@ -17,15 +17,21 @@ It's critical to know when the "open enrollment" period is, so you'd imagine
 that information would be prominently displayed on the home page.  Nope.
 It's nowhere in the homepage's main body or FAQ.  _Some_ of the info is
 shown periodically in the tiny "news" scroll at the top of the page.
+Even worse, when trying to log in during the 2016 open enrollment period,
+a popup is displayed saying the _2015_ open enrollment ended.  Sigh.
 
 The exchange gives me 88 health insurance plans to choose from.
-That's a _lot_ of stuff to think about.  But the site only allows
-comparing three plans at a time, and it only compares a few datapoints.
+That's a _lot_ of stuff to think about.  You can enter (a sadly limited
+set of) search criteria to trim down the number of plans to examine.
+Then you click on a plan to view its details.  When you're ready to
+look at the next plan, clicking the "Return to Plan List" takes you
+back to the...  GAAAAAHHH!  The list's search criteria and pagination
+are lost and you're back at the first page of all the plans.
 
-As a computer programmer and data lover I kept thinking
+As a computer programmer and data lover I kept screaming (mostly) in my mind
 "For heaven's sake, give me a spreadsheet!!!"
 But the exchange's website doesn't seem to have that option.
-So I took it upon myself.  Behold!
+So I took it upon myself.
 
 ## 2016 Open Enrollment Dates
 
