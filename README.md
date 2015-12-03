@@ -1,4 +1,4 @@
-# New York State of Health Spreadsheet and Help
+# New York State of Health Spreadsheets and Help
 
 New York's "Obamacare"
 [health insurance exchange website](https://nystateofhealth.ny.gov/individual)
@@ -12,12 +12,12 @@ the shortcomings.
 * Ends: January 31
 * Medicaid and Child Health Plus: available all year long
 
-## Spreadsheet
+## Spreadsheets
 
-The exchange has 88 health insurance plans for me to choose from.
+The exchange gives me 88 health insurance plans to choose from.
 That's a _lot_ of stuff to think about.  But the site only allows
 comparing three plans at a time, and it only compares a few datapoints.
-I quickly came to the conclusion "For heaven's sake, give me a spreadsheet!"
+"For heaven's sake, give me a spreadsheet!!!"
 
 
 
@@ -36,10 +36,15 @@ All questions should be addressed to the health insurance exchange:
 * TTY: 800-662-1220
 * https://nystateofhealth.ny.gov/individual
 
-Of course, if you're a computer programmer looking to help with this
-project or you have a job offer, that's another story! :)  To help out,
-fork the project and send in pull requests.  If you need a solid, senior
-developer, see my website: http://www.analysisandsolutions.com/
+Of course, if you're a computer programmer or an employer thereof,
+that's another story! :)  To help out, fork the project and send
+in pull requests.  If you need a solid, senior developer,
+see my website: http://www.analysisandsolutions.com/
+
+## Donations
+
+Did this data keep you from totally losing your mind?
+[Sending a few bucks my way would be so kind.](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=danielc%40analysisandsolutions%2ecom&lc=US&item_name=Donate%3a%20NY%20Health%20Insurance%20Spreadsheets&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
 ## Use at Your Own Risk
 
