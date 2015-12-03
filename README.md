@@ -25,7 +25,7 @@ So I took it upon myself.  Behold!
 
 * [Westchester County, Family Plans, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_family_unsubsidized.csv)
 
-To download a given "spreadsheet," click it's link, above, then click the
+To download a given "spreadsheet," click its link, above, then click the
 "Raw" button that's right above the data table.
 
 ## Tools for Extracting the Data
