@@ -20,18 +20,20 @@ shown periodically in the tiny "news" scroll at the top of the page.
 Even worse, when trying to log in during the 2016 open enrollment period,
 a popup is displayed saying the _2015_ open enrollment ended.  Sigh.
 
-The exchange gives me 88 health insurance plans to choose from.
-That's a _lot_ of stuff to think about.  You can enter (a sadly limited
+Once I'm logged in and have entered my family's information,
+the exchange gives me 88 health insurance plans to choose from.
+That's a _lot_ of stuff to think about.  I can enter (a sadly limited
 set of) search criteria to trim down the number of plans to examine.
-Then you click on a plan to view its details.  When you're ready to
-look at the next plan, clicking the "Return to Plan List" takes you
+Then I click on a plan to view its details.  When I'm ready to
+look at the next plan, clicking the "Return to Plan List" takes me
 back to the...  GAAAAAHHH!  The list's search criteria and pagination
-are lost and you're back at the first page of all the plans.
+are lost and I'm back at the first page of all the plans.
 
 As a computer programmer and data lover I kept screaming (mostly) in my mind
 "For heaven's sake, give me a spreadsheet!!!"
 But the exchange's website doesn't seem to have that option.
-So I took it upon myself.
+
+So I took it upon myself to make things better.  Welcome to the solution...
 
 ## 2016 Open Enrollment Dates
 
@@ -51,7 +53,34 @@ save function to download it.
 
 ## How to Extract Data from the "NY State of Health" Website
 
-## Independent
+Here are instructions for the technically savvy on how to glean more
+data points from New York's healh insurance exchange website.
+
+* Log in to https://nystateofhealth.ny.gov/individual/
+* Go to the "Find a Plan" page (once you've completed
+  the process of entering your personal information)
+* Scroll down to the plan data
+* Note: don't worry about pagination.  The table's HTML contains all of the
+  rows but sets `display: none` for "pages" other than the current one.
+* Right click on one of the data table's column headers
+* Click "Inspect element"
+* Scroll up to the `<table>` element, click on it, then right click on it
+  * Firefox: pick "Copy Outer HTML"
+  * Chrome: pick "Copy"
+* Now open your favorite shell
+* `cd` into the `new_york_state_of_health_spreadsheet/2016/raw_html_lists` directory
+* Paste the data into a file named `<county>_<group>_<subsidy level>.html`
+  (eg: `westchester_family_unsubsidized.html`).
+  (`xclip -o > filename.html` FTW. :).
+* `cd ..`
+* `./process_raw_html_lists.sh`
+
+TODO: finish writing steps to download and process the detail files
+
+* `./scrub_raw_html_details.sh`
+* `./extract_details.php`
+
+# Independent
 
 This is an independent project.  The State of New York and the various
 insurance companies have nothing to do with it.
