@@ -17,9 +17,13 @@ the shortcomings.
 The exchange gives me 88 health insurance plans to choose from.
 That's a _lot_ of stuff to think about.  But the site only allows
 comparing three plans at a time, and it only compares a few datapoints.
+
+As a computer programmer and data lover I kept thinking
 "For heaven's sake, give me a spreadsheet!!!"
+But the exchange's website doesn't seem to have that option.
+So I took it upon myself.  Behold!
 
-
+* [Westchester County, Family Plans, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/raw/master/2016/data/westchester_family_unsubsidized.csv)
 
 ## Tools for Extracting the Data
 
