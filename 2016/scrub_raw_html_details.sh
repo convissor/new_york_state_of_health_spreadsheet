@@ -72,7 +72,7 @@ fi
 
 
 # Ensure temporary files are removed no matter what.
-trap "rm -f tmp_html_details/*.html" EXIT
+trap "rm -f '$tmp_dir'/*.html" EXIT
 
 
 cp "$src_dir"/*.html "$tmp_dir"
