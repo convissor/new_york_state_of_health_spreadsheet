@@ -83,39 +83,39 @@ for file in $(find "$tmp_dir" -name \*.html) ; do
 	echo "Processing $file"
 
 	# These paths generally contain sensitve data.
-	sed 's@"/individual/prescreen.*"@""@' -i $file
+	sed 's@"/individual/prescreen.*"@""@' -i "$file"
 
 	# Blank out personal data.
-	sed -r 's@"(a[0-9]*_applicantId|a[0-9]*_dob|CSRFToken|cookieName|formUID|eId|enrlGrpId|mIds|zip)" value=".*"@"\1" value=""@' -i $file
+	sed -r 's@"(a[0-9]*_applicantId|a[0-9]*_dob|CSRFToken|cookieName|formUID|eId|enrlGrpId|mIds|zip)" value=".*"@"\1" value=""@' -i "$file"
 
 	# Delete names.
-	sed "s@Logged in as .*<@Logged in as XYZ<@" -i $file
-	sed '/<li style="word-wrap:break-word;">/d' -i $file
+	sed "s@Logged in as .*<@Logged in as XYZ<@" -i "$file"
+	sed '/<li style="word-wrap:break-word;">/d' -i "$file"
 
 	# Open up all of the treatment type comparisons.
-	sed 's@class="comparePlanDiv" style="display:none;"@class="comparePlanDiv" style=""@' -i $file
+	sed 's@class="comparePlanDiv" style="display:none;"@class="comparePlanDiv" style=""@' -i "$file"
 
 	# Various cleanups to get tidy to work.
-	sed 's@<header @<div @' -i $file
-	sed 's@</header>@</div>@' -i $file
+	sed 's@<header @<div @' -i "$file"
+	sed 's@</header>@</div>@' -i "$file"
 
-	sed -r 's@<form (.*)/>@<form \1>@' -i $file
+	sed -r 's@<form (.*)/>@<form \1>@' -i "$file"
 
-	sed 's@<footer @<div @' -i $file
-	sed 's@</footer>@</div>@' -i $file
+	sed 's@<footer @<div @' -i "$file"
+	sed 's@</footer>@</div>@' -i "$file"
 
-	sed 's@nav>@div>@' -i $file
+	sed 's@nav>@div>@' -i "$file"
 
 	# Convert to XHTML and clean file up so PHP can parse it.
 	set +e
-	tidy -q -f /dev/null -asxhtml -i -w 0 --wrap-attributes 0 -m $file
+	tidy -q -f /dev/null -asxhtml -i -w 0 --wrap-attributes 0 -m "$file"
 	if [ $? -eq 2 ] ; then
 		2&> echo "ERROR calling tidy on $file"
 		exit 1
 	fi
 	set -e
 
-	sed 's@&nbsp;@ @g' -i $file
+	sed 's@&nbsp;@ @g' -i "$file"
 done
 
 cp "$tmp_dir"/*.html "$dst_dir"
