@@ -1,4 +1,4 @@
-# New York State of Health Spreadsheets and Help
+# "New York State of Health" Spreadsheets and Help
 
 New York's "Obamacare"
 [health insurance exchange website](https://nystateofhealth.ny.gov/individual)
@@ -6,13 +6,17 @@ _really_ sucks.  Basic information is missing or hard to find.
 This repository is an independent attempt to work around some of
 the shortcomings.
 
-## 2016 Open Enrollment Dates
-* Starts: November 1
-* Deadline for Coverage Starting January 1: December 15
-* Ends: January 31
-* Medicaid and Child Health Plus: available all year long
+# The Horror.  The Inspiration.
 
-## Spreadsheets
+Feel free to skip this section and go right to data, below.
+
+But if you're into schadenfreude and/or learning from others' mistakes,
+read on...
+
+It's critical to know when the "open enrollment" period is, so you'd imagine
+that information would be prominently displayed on the home page.  Nope.
+It's nowhere in the homepage's main body or FAQ.  _Some_ of the info is
+shown periodically in the tiny "news" scroll at the top of the page.
 
 The exchange gives me 88 health insurance plans to choose from.
 That's a _lot_ of stuff to think about.  But the site only allows
@@ -23,12 +27,23 @@ As a computer programmer and data lover I kept thinking
 But the exchange's website doesn't seem to have that option.
 So I took it upon myself.  Behold!
 
-* [Westchester County, Family Plans, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_family_unsubsidized.csv)
+## 2016 Open Enrollment Dates
 
-To download a given "spreadsheet," click its link, above, then click the
-"Raw" button that's right above the data table.
+* Starts: November 1
+* Deadline for Coverage Starting January 1: December 15
+* Ends: January 31
+* Medicaid and Child Health Plus: available all year long
 
-## Tools for Extracting the Data
+## Spreadsheets
+
+* 2016
+  * [Westchester County, Family Plans, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_family_unsubsidized.csv)
+
+To download a given "spreadsheet," click its link, above, click the
+"Raw" button that's right above the data table, then use your browser's
+save function to download it.
+
+## How to Extract Data from the "NY State of Health" Website
 
 ## Independent
 
