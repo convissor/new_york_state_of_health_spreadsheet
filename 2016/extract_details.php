@@ -83,6 +83,10 @@ $all_keys = array(
 	'primary_care_visit_to_treat_an_injury_or_illness' => null,
 	'specialist_visit' => null,
 	'preventive_care_screening_immunization' => null,
+	'preferred_brand_drugs' => null,
+	'non_preferred_brand_drugs' => null,
+	'specialty_drugs' => null,
+	'generic_drugs' => null,
 );
 
 // Cache all data before generating .csv file in case a plan has a
