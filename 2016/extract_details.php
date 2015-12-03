@@ -1,30 +1,22 @@
 #! /usr/bin/env php
 <?php
 
-if (!empty($_SERVER['argv'][1])) {
-	switch ($_SERVER['argv'][1]) {
-		case '-h':
-		case '--help':
-		case 'help':
-			usage();
-			break;
-	}
-}
-
 function usage() {
-	echo "Usage: extract_details.php\n";
 	echo "\n";
-	echo "Pulls data out of insurance plan detail web pages downloaded\n";
-	echo "from the New York State of Health website.  Stores the result\n";
-	echo "in .csv files in the data directory.\n";
+	echo "Usage: extract_details.php <sub-directory>\n";
 	echo "\n";
-	echo "This script processes all .html files in the\n";
-	echo "clean_html_details directory.  Those files have been\n";
-	echo "processed by scrub_raw_html_details.sh.\n";
+	echo "Pulls data out of 2016 insurance plan detail web pages\n";
+	echo "downloaded from the New York State of Health website.\n";
+	echo "\n";
+	echo "Processes all .html files in the 'clean_html_details/<sub-directory>'.\n";
+	echo "Said files need to have been put there by our\n";
+	echo "'scrub_raw_html_details.sh' script.\n";
+	echo "\n";
+	echo "Extracted data is put in 'data/<sub-directory>.csv'.\n";
 	echo "\n";
 	echo "Author: Daniel Convissor <danielc@analysisandsolutions.com>\n";
 	echo "https://github.com/convissor/new_york_state_of_health_spreadsheet\n";
-	exit;
+	echo "\n";
 }
 
 function error($msg, $code) {
@@ -37,9 +29,25 @@ function error($msg, $code) {
 }
 
 
-$html_dir = __DIR__ . '/clean_html_details';
-$data_dir = __DIR__ . '/data';
-$data_file = "$data_dir/output.csv";
+if (empty($_SERVER['argv'][1])) {
+	error("<sub-directory> parameter is required", 0);
+	usage();
+	exit(1);
+} else {
+	switch ($_SERVER['argv'][1]) {
+		case '-h':
+		case '--help':
+			usage();
+			exit;
+		default:
+			$sub_dir = $_SERVER['argv'][1];
+	}
+}
+
+
+$html_dir = __DIR__ . "/clean_html_details/$sub_dir";
+$data_dir = __DIR__ . "/data";
+$data_file = "$data_dir/$sub_dir.csv";
 
 if (!is_readable($html_dir)) {
 	error("Not readable: $html_dir", __LINE__);
@@ -86,7 +94,7 @@ foreach ($files as $file) {
 	}
 
 	$id = basename($file, '.html');
-	$short_file = "clean_html_details/$id.html";
+	$short_file = "clean_html_details/$sub_dir/$id.html";
 
 	$data = array('plan_id' => $id);
 

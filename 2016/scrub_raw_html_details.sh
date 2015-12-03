@@ -1,17 +1,73 @@
 #! /bin/bash -e
 
-if [[ $1 == "-h" || $1 == "--help" || $1 == "help" ]] ; then
-	echo "Usage: scrub_raw_html_details.sh"
+function usage() {
 	echo ""
-	echo "Sanitizes and formats insurance plan detail web pages downloaded"
-	echo "from the New York State of Health website."
+	echo "Usage: scrub_raw_html_details.sh <sub-directory>"
 	echo ""
-	echo "This script grabs all .html files in the raw_html_details directory,"
-	echo "processes them and deposits them in clean_html_details directory."
+	echo "Sanitizes and formats 2016 insurance plan detail web pages"
+	echo "downloaded from the New York State of Health website."
+	echo ""
+	echo "Processes all .html files in 'raw_html_details/<sub-directory>'"
+	echo "and puts completed copies in 'clean_html_details/<sub-directory>'."
 	echo ""
 	echo "Author: Daniel Convissor <danielc@analysisandsolutions.com>"
 	echo "https://github.com/convissor/new_york_state_of_health_spreadsheet"
-	exit
+	echo ""
+}
+
+function error() {
+	echo "ERROR: $1" >&2
+
+	if [ "$2" -ne 0 ] ; then
+		exit $2
+	fi
+}
+
+
+# Parse input.
+while getopts "h" OPTION ; do
+	case $OPTION in
+		h|?)
+			usage
+			exit
+			;;
+	esac
+done
+
+if [ -z "$1" ] ; then
+	error "<sub-directory> parameter is required" 0
+	usage
+	exit 1
+fi
+
+sub_dir=$1
+
+
+# Set and check paths.
+
+this_dir="$(cd "$(dirname "$0")" && pwd)"
+
+src_dir="$this_dir/raw_html_details/$sub_dir";
+tmp_dir="$this_dir/tmp_html_details";
+dst_parent_dir="$this_dir/clean_html_details";
+dst_dir="$dst_parent_dir/$sub_dir";
+
+if [[ ! -r "$src_dir" ]] ; then
+	error "Not readable: $src_dir" 2
+fi
+
+if [[ ! -w "$tmp_dir" ]] ; then
+	error "Not writable: $tmp_dir" 3
+fi
+
+if [[ ! -w "$dst_dir" ]] ; then
+	if [[ -d "$dst_dir" ]] ; then
+		error "Not writable: $dst_dir" 5
+	elif [[ ! -w "$dst_parent_dir" ]] ; then
+		error "Not writable: $dst_parent_dir" 4
+	fi
+
+	mkdir "$dst_dir"
 fi
 
 
@@ -19,9 +75,9 @@ fi
 trap "rm -f tmp_html_details/*.html" EXIT
 
 
-cp raw_html_details/*.html tmp_html_details
+cp "$src_dir"/*.html "$tmp_dir"
 
-for file in $(find tmp_html_details -name \*.html) ; do
+for file in $(find "$tmp_dir" -name \*.html) ; do
 	echo "Processing $file"
 
 	# These paths generally contain sensitve data.
@@ -60,4 +116,4 @@ for file in $(find tmp_html_details -name \*.html) ; do
 	sed 's@&nbsp;@ @g' -i $file
 done
 
-cp tmp_html_details/*.html clean_html_details
+cp "$tmp_dir"/*.html "$dst_dir"
