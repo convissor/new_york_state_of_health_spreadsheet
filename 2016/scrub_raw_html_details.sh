@@ -75,6 +75,8 @@ fi
 trap "rm -f '$tmp_dir'/*.html" EXIT
 
 
+# Process the files...
+
 cp "$src_dir"/*.html "$tmp_dir"
 
 for file in $(find "$tmp_dir" -name \*.html) ; do
