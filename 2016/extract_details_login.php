@@ -8,9 +8,9 @@ function usage() {
 	echo "Pulls data out of 2016 insurance plan detail web pages\n";
 	echo "downloaded from the New York State of Health website.\n";
 	echo "\n";
-	echo "Processes all .html files in the 'clean_html_details/<sub-directory>'.\n";
+	echo "Processes all .html files in the 'clean_html_details_login/<sub-directory>'.\n";
 	echo "Said files need to have been put there by our\n";
-	echo "'scrub_raw_html_details.sh' script.\n";
+	echo "'scrub_raw_html_details_login.sh' script.\n";
 	echo "\n";
 	echo "Extracted data is put in 'data/<sub-directory>.csv'.\n";
 	echo "\n";
@@ -45,7 +45,7 @@ if (empty($_SERVER['argv'][1])) {
 }
 
 
-$html_dir = __DIR__ . "/clean_html_details/$sub_dir";
+$html_dir = __DIR__ . "/clean_html_details_login/$sub_dir";
 $data_dir = __DIR__ . "/data";
 $data_file = "$data_dir/$sub_dir.csv";
 
@@ -98,7 +98,7 @@ foreach ($files as $file) {
 	}
 
 	$id = basename($file, '.html');
-	$short_file = "clean_html_details/$sub_dir/$id.html";
+	$short_file = "clean_html_details_login/$sub_dir/$id.html";
 
 	$data = array('plan_id' => $id);
 

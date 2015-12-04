@@ -2,13 +2,13 @@
 
 function usage() {
 	echo ""
-	echo "Usage: scrub_raw_html_details.sh <sub-directory>"
+	echo "Usage: scrub_raw_html_details_login.sh <sub-directory>"
 	echo ""
 	echo "Sanitizes and formats 2016 insurance plan detail web pages"
 	echo "downloaded from the New York State of Health website."
 	echo ""
-	echo "Processes all .html files in 'raw_html_details/<sub-directory>'"
-	echo "and puts completed copies in 'clean_html_details/<sub-directory>'."
+	echo "Processes all .html files in 'raw_html_details_login/<sub-directory>'"
+	echo "and puts completed copies in 'clean_html_details_login/<sub-directory>'."
 	echo ""
 	echo "Author: Daniel Convissor <danielc@analysisandsolutions.com>"
 	echo "https://github.com/convissor/new_york_state_of_health_spreadsheet"
@@ -47,9 +47,9 @@ sub_dir=$1
 
 this_dir="$(cd "$(dirname "$0")" && pwd)"
 
-src_dir="$this_dir/raw_html_details/$sub_dir";
+src_dir="$this_dir/raw_html_details_login/$sub_dir";
 tmp_dir="$this_dir/tmp_html_details";
-dst_parent_dir="$this_dir/clean_html_details";
+dst_parent_dir="$this_dir/clean_html_details_login";
 dst_dir="$dst_parent_dir/$sub_dir";
 
 if [[ ! -r "$src_dir" ]] ; then

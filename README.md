@@ -45,7 +45,7 @@ So I took it upon myself to make things better.  Welcome to the solution...
 ## Spreadsheets
 
 * 2016
-  * [Westchester County, Family Plans, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_family_unsubsidized.csv)
+  * [Westchester County, Family Plan - 2 Kids, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_family-2kids_unsubsidized.csv)
 
 To download a given "spreadsheet," click its link, above, click the
 "Raw" button that's right above the data table, then use your browser's
@@ -69,16 +69,16 @@ data points from New York's healh insurance exchange website.
   * Chrome: pick "Copy"
 * Now open your favorite shell
 * `cd` into the `new_york_state_of_health_spreadsheet/2016/raw_html_lists` directory
-* Paste the data into a file named `<county>_<group>_<subsidy level>.html`
-  (eg: `westchester_family_unsubsidized.html`).
+* Paste the data into a file named `<county>_<type>_<subsidy level>.html`
+  (eg: `westchester_family-2kids_unsubsidized.html`).
   (`xclip -o > filename.html` FTW. :).
 * `cd ..`
 * `./process_raw_html_lists.sh`
 
 TODO: finish writing steps to download and process the detail files
 
-* `./scrub_raw_html_details.sh`
-* `./extract_details.php`
+* `./scrub_raw_html_details_login.sh`
+* `./extract_details_login.php`
 
 # Independent
 
