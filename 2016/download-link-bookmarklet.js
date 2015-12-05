@@ -1,11 +1,11 @@
 javascript:(function() {
 	/*
-	 * A bookmarklet that converts "View Detail" links to "Download Detail"
-	 * links in lists of insurance plans on the "New York State of Health"
-	 * website (https://nystateofhealth.ny.gov/individual/)
-	 *
-	 * @author Daniel Convissor <danielc@analysisandsolutions.com>
-	 * @link https://github.com/convissor/new_york_state_of_health_spreadsheet
+	  A bookmarklet that converts "View Detail" links to "Download Detail"
+	  links in lists of 2016 insurance plans on the "New York State of Health"
+	  website (https://nystateofhealth.ny.gov/individual/)
+
+	  @author Daniel Convissor <danielc@analysisandsolutions.com>
+	  @link https://github.com/convissor/new_york_state_of_health_spreadsheet
 	 */
 
 	if ($('form.#resultPage').length) {
@@ -35,6 +35,9 @@ javascript:(function() {
 
 			/* Display hidden rows. */
 			$(this).show();
+
+			/* Hide company logos to make lists more compact. */
+			$(this).children('.issuer-logo-image').hide();
 
 			/* Replace View Details cell with a download link. */
 			$(this).children('td:last').html(
