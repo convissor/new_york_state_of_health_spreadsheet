@@ -2,6 +2,6 @@ table, th, td {
 	border: thin solid black;
 }
 
-th.firstCol, .lastCol {
+.lastCol {
 	display: none;
 }

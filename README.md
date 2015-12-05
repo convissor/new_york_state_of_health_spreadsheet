@@ -54,31 +54,63 @@ save function to download it.
 ## How to Extract Data from the "NY State of Health" Website
 
 Here are instructions for the technically savvy on how to glean more
-data points from New York's healh insurance exchange website.
+data points from New York's health insurance exchange website.
+
+### Install My Bookmarklet
+
+If you haven't done so already, install my bookmarklet.  It _greatly_
+simplifies the process of downloading all of the plan detail pages.
+What it does is A) removes `display: none` from hidden plan rows so
+you can see all the plans at once, and B) converts the "View Detail"
+button into a "Download Detail" link.
+
+* Copy the code in [`2016/download-link-bookmarklet.js`](https://raw.githubusercontent.com/convissor/new_york_state_of_health_spreadsheet/master/2016/download-link-bookmarklet.js) to your clipboard
+* If you use Chrome:
+  * Menu | Bookmarks
+  * Ensure "Show bookmarks bar" has a check mark next to it.
+    If not, click on that menu option, then open the Bookmarks menu again.
+  * Bookmark manager
+  * In the "Folders" pane, click on the "Bookmarks bar" entry
+  * Right click in the "Organize" pane, pick "Add page..."
+  * Put "NYSOH Download Links" in the Name box
+  * Hit the `Tab`
+  * Paste the bookmarklet code into the URL box
+  * Hit the `Enter` key
+* If you use Firefox:
+  * Menu | View | Toolbar | Bookmarks Toolbar (put check in box if needed)
+  * Menu | Bookmarks | Show All Bookmarks
+  * In the left pane, click on the "Bookmarks Toolbar" entry
+  * Right click in the right pane, pick "New Bookmark..."
+  * Put "NYSOH Download Links" in the Name box
+  * Hit the `Tab`
+  * Paste the bookmarklet code into the Location box
+  * Hit the `Enter` key
+
+### Download the Plan Detail Pages You Want to Compare
+
+<blockquote>
+NOTE: Before getting started, here's what these instructions mean by the term
+__`<sub-directory>`__.  It's a way to group the HTML files you download and
+subsequently process based on the types of plans you're comparing.  The
+naming convention is `<county>_<plan-type>_<subsidy-level>`
+(eg: `westchester_family-2kids_unsubsidized.html`).
+</blockquote>
 
 * Log in to https://nystateofhealth.ny.gov/individual/
 * Go to the "Find a Plan" page (once you've completed
   the process of entering your personal information)
-* Scroll down to the plan data
-* Note: don't worry about pagination.  The table's HTML contains all of the
-  rows but sets `display: none` for "pages" other than the current one.
-* Right click on one of the data table's column headers
-* Click "Inspect element"
-* Scroll up to the `<table>` element, click on it, then right click on it
-  * Firefox: pick "Copy Outer HTML"
-  * Chrome: pick "Copy"
+* Click on the "NYSOH Download Links" entry in the bookmarks toolbar.
+* Click the "Download Detail" link
+* In the Save As dialog box, put the files in the appropriate
+  `new_york_state_of_health_spreadsheet/2016/raw_html_details_login/<sub-directory>`.
+  (Or you can move the downloaded files there after, no big deal.)
 * Now open your favorite shell
-* `cd` into the `new_york_state_of_health_spreadsheet/2016/raw_html_lists` directory
-* Paste the data into a file named `<county>_<type>_<subsidy level>.html`
-  (eg: `westchester_family-2kids_unsubsidized.html`).
-  (`xclip -o > filename.html` FTW. :).
-* `cd ..`
-* `./process_raw_html_lists.sh`
-
-TODO: finish writing steps to download and process the detail files
-
-* `./scrub_raw_html_details_login.sh`
-* `./extract_details_login.php`
+* `cd` into the `new_york_state_of_health_spreadsheet/2016` directory
+* `./scrub_raw_html_details_login.sh <sub-directory>`
+* `./extract_details_login.php <sub-directory>`
+* Your can be found in the `data/<sub-directory>.csv` file
+* Rejoice!  You can now examine all the data in a spreadsheet or database
+  of your choosing!
 
 # Independent
 

@@ -297,3 +297,6 @@ foreach ($all_data as $id => $data) {
 		error("Problem writing plan $id to $data_file", __LINE__);
 	}
 }
+
+echo "\nYour data can be found in a CSV file named:\n\n";
+echo "$data_file\n\n";

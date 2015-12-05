@@ -10,10 +10,37 @@ function usage() {
 	echo "Processes all .html files in 'raw_html_lists'"
 	echo "and puts completed copies in 'clean_html_lists'."
 	echo ""
+	echo "For full instructions, view the source of this script."
+	echo ""
 	echo "Author: Daniel Convissor <danielc@analysisandsolutions.com>"
 	echo "https://github.com/convissor/new_york_state_of_health_spreadsheet"
 	echo ""
 }
+
+# Full Instructions
+#
+# * Log in to https://nystateofhealth.ny.gov/individual/
+# * Go to the "Find a Plan" page (once you've completed
+#   the process of entering your personal information)
+# * Scroll down to the plan data
+# * Note: don't worry about pagination.  The table's HTML contains all of the
+#   rows but sets "display: none" for "pages" other than the current one.
+# * Right click on one of the data table's column headers
+# * Click "Inspect element"
+# * Scroll up to the <table> element, click on it, then right click on it
+#   * Firefox: pick "Copy Outer HTML"
+#   * Chrome: pick "Copy"
+# * Now open your favorite shell
+# * `cd` into the "new_york_state_of_health_spreadsheet/2016/raw_html_lists"
+#   directory
+# * Paste the data into a file named "<county>_<plan-type>_<subsidy-level>.html"
+#   (eg: "westchester_family-2kids_unsubsidized.html").
+#   (`xclip -o > filename.html` FTW. :).
+# * `cd ..`
+# * `./process_raw_html_lists.sh`
+# * The resulting table will be stored in a directory named
+#   "clean_html_lists/<county>_<type>_<subsidy level>"
+
 
 function error() {
 	echo "ERROR: $1" >&2
@@ -98,8 +125,8 @@ for file in $(find "$tmp_dir" -name \*.html) ; do
 	# Remove comparison button
 	sed '/comparePlansText/d' -i "$file"
 
-	# Remove comparison checkbox cell.
-	sed '/<label class="checkbox"/d' -i "$file"
+	# Replace comparison checkbox with plan id.
+	sed -r 's@<label class="checkbox" for="radioInput([0-9]+)".*</label>@\1@' -i "$file"
 
 	# Remove row count.
 	sed '/quotes_currentNoOfRecords/d' -i "$file"
@@ -121,18 +148,6 @@ for file in $(find "$tmp_dir" -name \*.html) ; do
 	sed '/\/ Person/d' -i "$file"
 	sed 's@per group</span> <span class="grayTxt">/ Family@per family@g' -i "$file"
 	sed 's/per person not applicable | //g' -i "$file"
-
-	# Create "personal" file with links to plan details.
-
-	# Put plan id in first cell.
-#	sed -r 's/  <input class="planId" value="([0-9]+)"/  \1<input class="planId" value="\1"/' -i "$file"
 done
 
 cp "$tmp_dir"/*.html "$dst_dir"
-
-
-# Notes.
-
-# https://nystateofhealth.ny.gov/individual/searchAnonymousPlan/plan/34342?county=New%20York&coverageTier=INDIVIDUAL&entityType=INDIVIDUAL&planYear=2016&youPay=
-
-# https://nystateofhealth.ny.gov/individual/searchAnonymousPlan/plan/34342?county=New%20York&coverageTier=COUPLE_AND_ONE_DEPENDENT&entityType=INDIVIDUAL&planYear=2016&youPay=
