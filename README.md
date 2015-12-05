@@ -42,6 +42,22 @@ So I took it upon myself to make things better.  Welcome to the solution...
 * Ends: January 31
 * Medicaid and Child Health Plus: available all year long
 
+## Got a Family?
+
+If you have kids under the age of 19, chances are you'll be best off
+picking two sets of plans.  One plan for the adult(s).  Then selecting
+a "Child Health Plus" plan for your little ones.  Child Health Plus
+is pretty good, has affordable premiums and, best of all, no copayments
+or coinsurance.
+
+This configuration gets set in the "Plan Selection Dashboard."  Instead of
+selecting a "Family Plan," select a "Couple Plan" or an "Individual Plan"
+for the grown ups, then select a "Child Only Plan" for the young'uns.
+
+If you already started shopping for a "Family Plan," go to the
+"Plan Selection Dashboard" and click the "Reset coverage information"
+button at the bottom of the page.
+
 ## Spreadsheets
 
 * 2016
@@ -112,7 +128,7 @@ naming convention is `<county>_<plan-type>_<subsidy-level>`
 * Rejoice!  You can now examine all the data in a spreadsheet or database
   of your choosing!
 
-# Independent
+## Independent
 
 This is an independent project.  The State of New York and the various
 insurance companies have nothing to do with it.
