@@ -106,10 +106,11 @@ button into a "Download Detail" link.
 
 <blockquote>
 NOTE: Before getting started, here's what these instructions mean by the term
-__`<sub-directory>`__.  It's a way to group the HTML files you download and
-subsequently process based on the types of plans you're comparing.  The
-naming convention is `<county>_<plan-type>_<subsidy-level>`
-(eg: `westchester_family-2kids_unsubsidized.html`).
+<strong><code>&lt;sub-directory&gt;</code></strong>.  It's a way to group
+the HTML files you download and subsequently process based on the types
+of plans you're comparing.  The naming convention is
+<code>&lt;county&gt;_&lt;plan-type&gt;_&lt;subsidy-level&gt;</code>
+(eg: <code>westchester_family-2kids_unsubsidized.html</code>).
 </blockquote>
 
 * Log in to https://nystateofhealth.ny.gov/individual/
