@@ -47,4 +47,11 @@ javascript:(function() {
 		/* Convert View Detail regular link to a download link. */
 		$('a.planDetails').attr('download', '').html('Download Detail');
 	}
+
+	/* Gray out visited download links. */
+	$('head').append('
+		<style>
+			td.lastCol a:visited {color: gray !important;}
+		</style>
+	');
 })();
