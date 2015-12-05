@@ -20,10 +20,13 @@ read on...
 
 It's critical to know when the "open enrollment" period is, so you'd imagine
 that information would be prominently displayed on the home page.  Nope.
-It's nowhere in the homepage's main body or FAQ.  _Some_ of the info is
+It's nowhere in the homepage's
+[main body](https://raw.githubusercontent.com/convissor/new_york_state_of_health_spreadsheet/master/2016/screenshots/nysoh.2016-12-01.homepage.lacks.clear.open.enrollment.dates.png)
+or FAQ.  _Some_ of the info is
 shown periodically in the tiny "news" scroll at the top of the page.
-Even worse, when trying to log in during the 2016 open enrollment period,
-a popup is displayed saying the _2015_ open enrollment ended.  Sigh.
+Even worse, when trying to log in during the 2016 open enrollment period, a
+[popup is displayed](https://raw.githubusercontent.com/convissor/new_york_state_of_health_spreadsheet/master/2016/screenshots/nysoh.2016-12-01.login.popup.has.last.years.dates.png)
+saying the _2015_ open enrollment ended.  Sigh.
 
 Once I'm logged in and have entered my family's information,
 the exchange gives me 88 health insurance plans to choose from.
