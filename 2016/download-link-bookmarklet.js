@@ -36,9 +36,6 @@ javascript:(function() {
 			/* Display hidden rows. */
 			$(this).show();
 
-			/* Hide company logos to make lists more compact. */
-			$(this).children('.issuer-logo-image').hide();
-
 			/* Replace View Details cell with a download link. */
 			$(this).children('td:last').html(
 				'<a href="' + url + '" download="' + id + '.html">Download Detail</a>'
