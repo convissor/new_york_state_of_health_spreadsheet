@@ -8,7 +8,12 @@ the shortcomings.
 
 # The Horror.  The Inspiration.
 
-Feel free to skip this section and go right to data sections that follow.
+Feel free to skip this section and go right to the helpful
+[2016 Open Enrollment Dates](#user-content-2016-open-enrollment-dates),
+[Got a Family?](#user-content-got-a-family),
+[Spredsheets](#user-content-spreadsheets),
+or [How to Extract Data](#user-content-how-to-extract-data-from-the-ny-state-of-health-website)
+sections that follow.
 
 But if you're into schadenfreude and/or learning from others' mistakes,
 read on...
@@ -89,7 +94,7 @@ button into a "Download Detail" link.
   * In the "Folders" pane, click on the "Bookmarks bar" entry
   * Right click in the "Organize" pane, pick "Add page..."
   * Put "NYSOH Download Links" in the Name box
-  * Hit the `Tab`
+  * Hit the `Tab` key
   * Paste the bookmarklet code into the URL box
   * Hit the `Enter` key
 * If you use Firefox:
@@ -98,7 +103,7 @@ button into a "Download Detail" link.
   * In the left pane, click on the "Bookmarks Toolbar" entry
   * Right click in the right pane, pick "New Bookmark..."
   * Put "NYSOH Download Links" in the Name box
-  * Hit the `Tab`
+  * Hit the `Tab` key
   * Paste the bookmarklet code into the Location box
   * Hit the `Enter` key
 
