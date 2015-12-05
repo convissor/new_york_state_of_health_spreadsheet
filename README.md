@@ -118,11 +118,15 @@ of plans you're comparing.  The naming convention is
   the process of entering your personal information)
 * Click on the "NYSOH Download Links" entry in the bookmarks toolbar
 * Click the "Download Detail" links for the plans you want to compare
-* In the Save As dialog box, put the files in the appropriate
-  `new_york_state_of_health_spreadsheet/2016/raw_html_details_login/<sub-directory>`.
-  (Or you can move the downloaded files there after, no big deal.)
-* Now open your favorite shell
-* `cd` into the `new_york_state_of_health_spreadsheet/2016` directory
+* If you get a Save As dialog box:
+  * Save these files in the appropriate
+    `new_york_state_of_health_spreadsheet/2016/raw_html_details_login/<sub-directory>`.
+  * You'll save a _ton_ of time if you pick "Save File" and the
+    "Do this automatically for files like this from now on."  At least that's
+    what to do in Firefox.
+* Once you're done downloading, open terminal shell window
+* If necessary: `mv [0-9]*.html <path to>/new_york_state_of_health_spreadsheet/2016/raw_html_details_login/<sub-directory>`
+* `cd <path to>/new_york_state_of_health_spreadsheet/2016`
 * `./scrub_raw_html_details_login.sh <sub-directory>`
 * `./extract_details_login.php <sub-directory>`
 * Your can be found in the `data/<sub-directory>.csv` file
