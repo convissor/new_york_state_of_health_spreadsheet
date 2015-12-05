@@ -124,9 +124,11 @@ of plans you're comparing.  The naming convention is
   * You'll save a _ton_ of time if you pick "Save File" and the
     "Do this automatically for files like this from now on."  At least that's
     what to do in Firefox.
-* Once you're done downloading, open terminal shell window
+* Once you're done downloading, open a terminal window
 * If necessary: `mv [0-9]*.html <path to>/new_york_state_of_health_spreadsheet/2016/raw_html_details_login/<sub-directory>`
 * `cd <path to>/new_york_state_of_health_spreadsheet/2016`
+* Make sure you downloaded all the files you expected:
+  `ls <sub-directory>/*html | wc -l`
 * `./scrub_raw_html_details_login.sh <sub-directory>`
 * `./extract_details_login.php <sub-directory>`
 * Your can be found in the `data/<sub-directory>.csv` file
