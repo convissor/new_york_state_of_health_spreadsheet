@@ -15,7 +15,7 @@ Feel free to skip this section and go right to the helpful
 or [How to Extract Data](#user-content-how-to-extract-data-from-the-ny-state-of-health-website)
 sections that follow.
 
-But if you're into schadenfreude and/or learning from others' mistakes,
+But if you're into schadenfreude, snark and/or learning from others' mistakes,
 read on...
 
 It's critical to know when the "open enrollment" period is, so you'd imagine
