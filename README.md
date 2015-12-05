@@ -115,8 +115,8 @@ naming convention is `<county>_<plan-type>_<subsidy-level>`
 * Log in to https://nystateofhealth.ny.gov/individual/
 * Go to the "Find a Plan" page (once you've completed
   the process of entering your personal information)
-* Click on the "NYSOH Download Links" entry in the bookmarks toolbar.
-* Click the "Download Detail" link
+* Click on the "NYSOH Download Links" entry in the bookmarks toolbar
+* Click the "Download Detail" links for the plans you want to compare
 * In the Save As dialog box, put the files in the appropriate
   `new_york_state_of_health_spreadsheet/2016/raw_html_details_login/<sub-directory>`.
   (Or you can move the downloaded files there after, no big deal.)
