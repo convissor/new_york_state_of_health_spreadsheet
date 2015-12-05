@@ -36,6 +36,7 @@ Then I click on a plan to view its details.  When I'm ready to
 look at the next plan, clicking the "Return to Plan List" takes me
 back to the...  GAAAAAHHH!  The list's search criteria and pagination
 are lost and I'm back at the first page of all the plans.
+This happens in both Firefox and Chrome.
 
 As a computer programmer and data lover I kept screaming (mostly) in my mind
 "For heaven's sake, give me a spreadsheet!!!"
