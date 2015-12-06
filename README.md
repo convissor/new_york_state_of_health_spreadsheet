@@ -171,11 +171,13 @@ insurance companies have nothing to do with it.
 
 ## Questions?
 
-All questions should be addressed to the health insurance exchange:
+All questions about insurance plans should be addressed to the
+health insurance exchange:
 
 * Phone: 855-355-5777
 * TTY: 800-662-1220
 * https://nystateofhealth.ny.gov/individual
+* Or set up a meeting with an [In Person Assistor/Navigator](https://nystateofhealth.ny.gov/agent/hx_brokerSearch)
 
 Of course, if you're a computer programmer or an employer thereof,
 that's another story! :)  To help out, fork the project and send
