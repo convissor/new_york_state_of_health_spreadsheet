@@ -162,9 +162,9 @@ The <code>&lt;plan-type&gt;</code> is something like "individual",
 * `./scrub_raw_html_details_login.sh <sub-directory>`
 * `./extract_details_login.php <sub-directory>`
 * Your results can be found in the `data/<sub-directory>.csv` file
-* Examine examine the file's data using your software of choice
+* Examine the file's data using your software of choice
   (spreadsheet, database, etc)
-* Rejoice!  (Well, as much one can while analyzing dozens and dozens
+* Rejoice!  (Well, as much as one can while analyzing dozens and dozens
   of health insurance plans. `:)`)
 
 ## Independent
