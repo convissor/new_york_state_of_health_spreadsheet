@@ -92,8 +92,13 @@ save function to download it.
 
 ## How to Extract Data from the "NY State of Health" Website
 
+Didn't see the .csv file you need?  Don't fret.
 Here are instructions (for moderately technically savvy people) on how to
-create .csv data files for the health insurance plans you want to compare.
+create .csv files for the health insurance plans you want to compare.
+
+And if you run the process for all of your county's plans in a given category
+(be it Family, Couple, Individual, etc), submit a pull request so others can
+benefit from it.
 
 ### Install My Bookmarklet
 
@@ -103,6 +108,7 @@ What it does is A) removes `display: none` from hidden plan rows so
 you can see all the plans at once, and B) converts the "View Detail"
 button into a "Download Detail" link.
 
+* `git clone git://github.com/convissor/new_york_state_of_health_spreadsheet.git`
 * Copy the code in [`2016/download-link-bookmarklet.js`](https://raw.githubusercontent.com/convissor/new_york_state_of_health_spreadsheet/master/2016/download-link-bookmarklet.js) to your clipboard
 * If you use Chrome:
   * Menu | Bookmarks
