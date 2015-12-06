@@ -80,7 +80,8 @@ you can sort and query the data in ways relevant to you.
 
 To download a given "spreadsheet," click its link, above, click the
 "Raw" button that's right above the data table, then use your browser's
-save function to download it.
+save function to download it.  That you don't need to deal with a "save as"
+dialog box for each detail page you download.
 
 * 2016
   * [Westchester County, Individual, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_individual_unsubsidized.csv)
