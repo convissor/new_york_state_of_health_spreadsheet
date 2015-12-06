@@ -38,20 +38,27 @@ javascript:(function() {
 
 			/* Replace View Details cell with a download link. */
 			$(this).children('td:last').html(
-				'<a href="' + url + '" download="' + id + '.html">Download Detail</a>'
+				'<a href="' + url + '" download="' + id + '.html"
+					class="taasc_dl">Download Detail</a>'
 			);
 		});
 	} else {
 		/* List is from an anonymous user. */
 
 		/* Convert View Detail regular link to a download link. */
-		$('a.planDetails').attr('download', '').html('Download Detail');
+		$('a.planDetails').each(function() {
+			var id = $(this).attr('href').replace(/^.*\/(\d+)\?.*$/, '$1');
+
+			$(this).attr('class', 'taasc_dl')
+				.attr('download', id + '.html')
+				.html('Download Detail');
+		});
 	}
 
 	/* Gray out visited download links. */
 	$('head').append('
 		<style>
-			td.lastCol a:visited {color: gray !important;}
+			a.taasc_dl:visited {color: gray !important;}
 		</style>
 	');
 })();
