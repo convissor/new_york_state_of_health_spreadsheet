@@ -141,8 +141,9 @@ The `<plan-type>` is something like "individual", "couple", "family-2kids".
 </blockquote>
 
 * Log in to https://nystateofhealth.ny.gov/individual/
-* Go to the "Find a Plan" page (once you've completed
-  the process of entering your personal information)
+* If you haven't completed the process of entering your personal, family and
+  financial information, do so now
+* Go to the "Find a Plan" page
 * Click on the "NYSOH Download Links" entry in the bookmarks toolbar
 * Click the "Download Detail" links for the plans you want to compare
 * If you get a Save As dialog box:
