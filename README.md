@@ -86,9 +86,7 @@ To download a given "spreadsheet," click its link, above, click the
 save function to download it.
 
 * 2016
-  * Westchester County, Individual, Unsubsidized:
-    <a href="https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_individual_unsubsidized.csv">(view)</a>
-    <a download="westchester_individual_unsubsidized.csv" href="https://raw.githubusercontent.com/convissor/new_york_state_of_health_spreadsheet/master/2016/data/westchester_individual_unsubsidized.csv">(download)</a>
+  * [Westchester County, Individual, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_individual_unsubsidized.csv)
   * [Westchester County, Couple, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_couple_unsubsidized.csv)
   * [Westchester County, Family Plan - 2 Kids, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_family-2kids_unsubsidized.csv)
 
