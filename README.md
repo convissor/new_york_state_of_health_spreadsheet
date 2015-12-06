@@ -70,19 +70,30 @@ button at the bottom of the page.
 
 ## Spreadsheets
 
-* 2016
-  * [Westchester County, Individual, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_individual_unsubsidized.csv)
-  * [Westchester County, Couple, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_couple_unsubsidized.csv)
-  * [Westchester County, Family Plan - 2 Kids, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_family-2kids_unsubsidized.csv)
+Below are links to "comma separated values" (CSV) data files of premiums,
+deductables, copayments, coinsurance, etc.  Each file covers the health
+insurance plans available in a given county, separated by the type of
+people being covered and how much they're being subsidized.
+
+You can import these files into spreadsheet or database programs, where
+you can sort and query the data in ways relevant to you.
+
+Note: while a county has multiple CSV files here, the only difference
+between them are the premiums.  The benefits are the same.
 
 To download a given "spreadsheet," click its link, above, click the
 "Raw" button that's right above the data table, then use your browser's
 save function to download it.
 
+* 2016
+  * [Westchester County, Individual, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_individual_unsubsidized.csv)
+  * [Westchester County, Couple, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_couple_unsubsidized.csv)
+  * [Westchester County, Family Plan - 2 Kids, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_family-2kids_unsubsidized.csv)
+
 ## How to Extract Data from the "NY State of Health" Website
 
-Here are instructions for the technically savvy on how to glean more
-data points from New York's health insurance exchange website.
+Here are instructions (for moderately technically savvy people) on how to
+create .csv data files for the health insurance plans you want to compare.
 
 ### Install My Bookmarklet
 
