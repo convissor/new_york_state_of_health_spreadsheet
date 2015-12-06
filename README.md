@@ -6,7 +6,7 @@ _really_ sucks.  Basic information is missing or hard to find.
 This repository is an independent attempt to work around some of
 the shortcomings.
 
-# The Horror.  The Inspiration.
+## The Horror.  The Inspiration.
 
 Feel free to skip this section and go right to the helpful
 [2016 Open Enrollment Dates](#user-content-2016-open-enrollment-dates),
@@ -43,6 +43,7 @@ As a computer programmer and data lover I kept screaming (mostly) in my mind
 But the exchange's website doesn't seem to have that option.
 
 So I took it upon myself to make things better.  Welcome to the solution...
+_(well, other than a [national health program](http://www.pnhp.org/) `:)`)_...
 
 ## 2016 Open Enrollment Dates
 
