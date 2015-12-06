@@ -71,15 +71,12 @@ button at the bottom of the page.
 ## Spreadsheets
 
 Below are links to "comma separated values" (CSV) data files of premiums,
-deductables, copayments, coinsurance, etc.  Each file covers the health
-insurance plans available in a given county, separated by the type of
-people being covered and how much they're being subsidized.
+deductables, copayments, coinsurance, etc.  A given file contains data on all
+plans covering one combination of county / plan type (eg Individual, Couple,
+etc) / subsidy level.
 
 You can import these files into spreadsheet or database programs, where
 you can sort and query the data in ways relevant to you.
-
-Note: while a county has multiple CSV files here, the only difference
-between them are the premiums.  The benefits are the same.
 
 To download a given "spreadsheet," click its link, above, click the
 "Raw" button that's right above the data table, then use your browser's
