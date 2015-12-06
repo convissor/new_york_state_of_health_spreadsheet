@@ -184,8 +184,8 @@ health insurance exchange:
 
 Of course, if you're a computer programmer or an employer thereof,
 that's another story! :)  To help out, fork the project and send
-in pull requests.  If you need a solid, senior developer,
-see my website: http://www.analysisandsolutions.com/
+in pull requests.  If you need a solid, senior developer, see my
+[resume](http://www.analysisandsolutions.com/resume/daniel_convissor.htm).
 
 ## Donations
 
