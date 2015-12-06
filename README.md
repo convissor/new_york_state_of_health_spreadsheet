@@ -154,15 +154,17 @@ The <code>&lt;plan-type&gt;</code> is something like "individual",
     "Do this automatically for files like this from now on."  At least that's
     what to do in Firefox.
 * Once you're done downloading, open a terminal window
-* If necessary: `mv [0-9]*.html <path to>/new_york_state_of_health_spreadsheet/2016/raw_html_details_login/<sub-directory>`
 * `cd <path to>/new_york_state_of_health_spreadsheet/2016`
+* If necessary: `mv <download directory>/[0-9]*.html <sub-directory>`
 * Make sure you downloaded all the files you expected:
   `ls <sub-directory>/*html | wc -l`
 * `./scrub_raw_html_details_login.sh <sub-directory>`
 * `./extract_details_login.php <sub-directory>`
-* Your can be found in the `data/<sub-directory>.csv` file
-* Rejoice!  You can now examine all the data in a spreadsheet or database
-  of your choosing!
+* Your results can be found in the `data/<sub-directory>.csv` file
+* Examine examine the file's data using your software of choice
+  (spreadsheet, database, etc)
+* Rejoice!  (Well, as much one can while analyzing dozens and dozens
+  of health insurance plans. `:)`)
 
 ## Independent
 
