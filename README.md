@@ -70,6 +70,7 @@ button at the bottom of the page.
 ## Spreadsheets
 
 * 2016
+  * [Westchester County, Individual, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_individual_unsubsidized.csv)
   * [Westchester County, Couple, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_couple_unsubsidized.csv)
   * [Westchester County, Family Plan - 2 Kids, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_family-2kids_unsubsidized.csv)
 
