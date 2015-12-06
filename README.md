@@ -152,7 +152,8 @@ The <code>&lt;plan-type&gt;</code> is something like "individual",
     `new_york_state_of_health_spreadsheet/2016/raw_html_details_login/<sub-directory>`.
   * You'll save a _ton_ of time if you pick "Save File" and the
     "Do this automatically for files like this from now on."  At least that's
-    what to do in Firefox.
+    what to do in Firefox.  This way, you don't need to deal with a "save as"
+    dialog box for each detail page downloaded.
 * Once you're done downloading, open a terminal window
 * `cd <path to>/new_york_state_of_health_spreadsheet/2016`
 * If necessary: `mv <download directory>/[0-9]*.html <sub-directory>`
