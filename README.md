@@ -78,8 +78,8 @@ etc) / subsidy level.
 You can import these files into spreadsheet or database programs, where
 you can sort and query the data in ways relevant to you.
 
-To download a given "spreadsheet," click its link, above, click the
-"Raw" button that's right above the data table, then use your browser's
+To download a given "spreadsheet," click its link, below, next click the
+"Raw" button at the top right of the the data table, then use your browser's
 save function to download it.
 
 * 2016
