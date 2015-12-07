@@ -68,6 +68,10 @@ If you already started shopping for a "Family Plan," go to the
 "Plan Selection Dashboard" and click the "Reset coverage information"
 button at the bottom of the page.
 
+If you're not given the option to select a Child Health Plus plan, you
+probably need to edit your information in the website to set an end date
+for your current insurance.
+
 ## Spreadsheets
 
 Below are links to "comma separated values" (CSV) data files of premiums,
