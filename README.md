@@ -91,6 +91,21 @@ save function to download it.
   * [Westchester County, Couple, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_couple_unsubsidized.csv)
   * [Westchester County, Family Plan - 2 Kids, Unsubsidized](https://github.com/convissor/new_york_state_of_health_spreadsheet/blob/master/2016/data/westchester_family-2kids_unsubsidized.csv)
 
+Here are some equations I added to my personal spreadsheets that helped
+cut through the clutter.  (These equations are not in the .csv files, above.)
+
+* ANNUAL_PREMIUM: `premium * 12`
+
+* MAX_TOTAL_PAYMENT: `ANNUAL_PREMIUM + max_out_of_pocket_family`
+
+* TOTAL_DEDUCTABLE:
+
+	IF(
+		combined_deductable_family > 0,
+		combined_deductable_family,
+		medical_deductable_family + drug_deductable_family
+	)
+
 ## How to Extract Data from the "NY State of Health" Website
 
 Didn't see the .csv file you need?  Don't fret.
