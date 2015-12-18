@@ -48,7 +48,7 @@ _(well, other than a [national health program](http://www.pnhp.org/) `:)`)_...
 ## 2016 Open Enrollment Dates
 
 * Starts: November 1
-* Deadline for Coverage Starting January 1: December 15
+* Deadline for Coverage Starting January 1: EXTENDED TO DECEMBER 19 (was December 15)
 * Ends: January 31
 * Medicaid and Child Health Plus: available all year long
 
