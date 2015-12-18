@@ -119,6 +119,9 @@ foreach ($files as $file) {
 	if (!$cell) {
 		error("$short_file: loading $key cell", __LINE__);
 	}
+	if (strpos($cell, 'Select Care') === 0) {
+		$cell = 'EmblemHealth ' . $cell;
+	}
 	$data[$key] = $cell;
 
 	/*
