@@ -228,9 +228,13 @@ foreach ($files as $file) {
 	}
 	$data[$key] = trim($cell);
 
-	$benefit_sections = @$xml->body->div->div[3]->div->div[1]->form->div[2];
+	$benefit_sections = @$xml->body->div->div[3]->div->div[1]->form->div[3];
 	if ($benefit_sections === null) {
-		error("$short_file: loading benefit sections", __LINE__);
+		// Old style.
+		$benefit_sections = @$xml->body->div->div[3]->div->div[1]->form->div[2];
+		if ($benefit_sections === null) {
+			error("$short_file: loading benefit sections", __LINE__);
+		}
 	}
 	foreach ($benefit_sections as $section) {
 		if (!isset($section->table)) {
