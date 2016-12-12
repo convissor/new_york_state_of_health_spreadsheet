@@ -115,7 +115,7 @@ foreach ($files as $file) {
 	 */
 
 	$key = 'plan_name';
-	$cell = trim(@$xml->body->div->div[3]->div->div[1]->div->form->table[0]->tr->th[1]);
+	$cell = trim(@$xml->body->div->div[3]->div->div[1]->form->table[0]->tr->th[1]);
 	if (!$cell) {
 		error("$short_file: loading $key cell", __LINE__);
 	}
@@ -128,7 +128,7 @@ foreach ($files as $file) {
 	 * Premium, metal.
 	 */
 
-	$row = @$xml->body->div->div[3]->div->div[1]->div->form->table[1]->tr[0];
+	$row = @$xml->body->div->div[3]->div->div[1]->form->table[1]->tr[0];
 	if ($row === null) {
 		error("$short_file: loading premium row", __LINE__);
 	}
@@ -151,7 +151,7 @@ foreach ($files as $file) {
 	 * Deductables.
 	 */
 
-	$row = @$xml->body->div->div[3]->div->div[1]->div->form->table[1]->tr[1];
+	$row = @$xml->body->div->div[3]->div->div[1]->form->table[1]->tr[1];
 	if ($row === null) {
 		error("$short_file: loading deductable row", __LINE__);
 	}
@@ -190,7 +190,7 @@ foreach ($files as $file) {
 	 * Out of pocket, out of network, HSA.
 	 */
 
-	$row = @$xml->body->div->div[3]->div->div[1]->div->form->table[1]->tr[2];
+	$row = @$xml->body->div->div[3]->div->div[1]->form->table[1]->tr[2];
 	if ($row === null) {
 		error("$short_file: loading out of pocket row", __LINE__);
 	}
@@ -228,7 +228,7 @@ foreach ($files as $file) {
 	}
 	$data[$key] = trim($cell);
 
-	$benefit_sections = @$xml->body->div->div[3]->div->div[1]->div->form->div[2];
+	$benefit_sections = @$xml->body->div->div[3]->div->div[1]->form->div[2];
 	if ($benefit_sections === null) {
 		error("$short_file: loading benefit sections", __LINE__);
 	}

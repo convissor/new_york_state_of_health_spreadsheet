@@ -105,8 +105,14 @@ for file in $(find "$tmp_dir" -name \*.html) ; do
 	sed 's@<footer @<div @' -i "$file"
 	sed 's@</footer>@</div>@' -i "$file"
 
-	sed 's@<style>@<!-- <style>@' -i "$file"
-	sed 's@</style>@</style> -->@' -i "$file"
+	sed -e '/<style>.*<\/style>/d' -i "$file"
+	sed -e '/<style/,/<\/style>/d' -i "$file"
+
+	sed -e '/<meta.*/d' -i "$file"
+	sed -e '/<link.*/d' -i "$file"
+
+	sed -e '/<script>.*<\/script>/d' -i "$file"
+	sed -e '/<script/,/<\/script>/d' -i "$file"
 
 	sed 's@nav>@div>@' -i "$file"
 
@@ -115,7 +121,7 @@ for file in $(find "$tmp_dir" -name \*.html) ; do
 
 	# Convert to XHTML and clean file up so PHP can parse it.
 	set +e
-	tidy -q -f /dev/null -asxhtml -i -w 0 --wrap-attributes 0 -m "$file"
+	tidy -q -f /dev/null -asxhtml -i -w 0 --hide-comments 1 --wrap-attributes 0 -m "$file"
 	if [ $? -eq 2 ] ; then
 		echo "ERROR calling tidy on $file"
 		exit 1
