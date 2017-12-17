@@ -57,17 +57,15 @@ if [[ ! -r "$src_dir" ]] ; then
 fi
 
 if [[ ! -w "$tmp_dir" ]] ; then
-	error "Not writable: $tmp_dir" 3
+	mkdir "$tmp_dir"
 fi
 
 if [[ ! -w "$dst_dir" ]] ; then
 	if [[ -d "$dst_dir" ]] ; then
 		error "Not writable: $dst_dir" 5
-	elif [[ ! -w "$dst_parent_dir" ]] ; then
-		error "Not writable: $dst_parent_dir" 4
 	fi
 
-	mkdir "$dst_dir"
+	mkdir -p "$dst_dir"
 fi
 
 
